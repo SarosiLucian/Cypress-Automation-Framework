@@ -39,7 +39,7 @@ describe("Veryfing variables, Cypress commands and Jquery commands", () =>{
 
     });
 
-    it.only("Validate properties of Contact Us page", () => {
+    it("Validate properties of Contact Us page", () => {
         cy.visit("https://automationteststore.com/index.php?rt=content/contact")
         
         //Uses Cypress chaining commands
