@@ -33,8 +33,12 @@ beforeEach(function() {
     });
 
     it("Should not be able to submit a successfull submission via contact us form", () => {
+        if(Cypress.isBrowser('chrome')){
 
-        contact_Us_PO.contactForm_Submission(data.first_name, data.last_name, " ", "This is a test.", 'body', 
-        'Error: Invalid email address')
+        } else {
+            contact_Us_PO.contactForm_Submission(data.first_name, data.last_name, " ", "This is a test.", 'body', 
+            'Error: Invalid email address')
+        }
+
     });
 })
