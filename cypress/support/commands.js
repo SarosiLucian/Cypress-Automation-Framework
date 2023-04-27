@@ -54,7 +54,17 @@ Cypress.Commands.add("webdriverUni_ContactForm_Submission", (firstName, lastName
     cy.get($selector).contains(textToLocate)
 })
 
+Cypress.Commands.add("LoginAutomationTestStore", () => {
 
+const username = "LucianSarosi"
+const password = "1234"
+
+cy.get('ul[id="customer_menu_top"] li a').click();
+cy.get("#loginFrm_loginname").type(username);
+cy.get("#loginFrm_password").type(password);
+cy.get('button[title="Login"]').click();
+cy.get('div[class="menu_text"]').should("be.visible").and("include.text", "Welcome back Lucian");
+})
 
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
