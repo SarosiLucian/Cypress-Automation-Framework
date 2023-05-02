@@ -12,12 +12,12 @@ describe("Test Suite Contact Us form via Automation Test Store", () =>{
          cy.visit("https://automationteststore.com")
          cy.get("a[href$='contact']").click().then(function(footerContactUs){
          cy.log('Clicked on the following link: ' + footerContactUs.text())
-    })
+        })
          cy.get('@user').then((user) => {
          cy.get('#ContactUsFrm_first_name').type(user.first_name)
          cy.get('#ContactUsFrm_email').type(user.email)
 
-})
+        })
         cy.get('#ContactUsFrm_email').should('have.attr', 'name', 'email')
         cy.get('#ContactUsFrm_enquiry').type("This is just a test.")
         cy.get("button[title='Submit']").click()
