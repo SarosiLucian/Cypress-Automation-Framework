@@ -9,7 +9,7 @@ describe('New customer register', () => {
         cy.get('button[title="Continue"]').click()
         cy.get('#AccountFrm_firstname').type('Lucian')
         cy.get('#AccountFrm_lastname').type('Sarosi')
-        cy.get('#AccountFrm_email').type('lucian.sarosi+1@yahoo.com')
+        cy.get('#AccountFrm_email').type('lucian.lucian@yahoo.com')
 
         //Your Address
         cy.get('#AccountFrm_address_1').type('test, 1')
