@@ -41,11 +41,11 @@ describe("Handle js alerts", () =>{
         const stub = cy.stub()
         cy.on('window:confirm', stub)
         cy.get("#button4").click().then(() => {
-            expect(stub.getCall(0)).to.calledWith('Press a button!') // another type of assertion
+            expect(stub.getCall(0)).to.calledWith('Press a button!') 
         }).then(() => {
-          return true; // this will click on the OK button
+          return true; 
         }).then(() => {
-          cy.get("#confirm-alert-text").contains("You pressed OK!") // validates the message output after clicking the button
+          cy.get("#confirm-alert-text").contains("You pressed OK!")
         })
     });
 })

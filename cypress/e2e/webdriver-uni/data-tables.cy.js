@@ -15,7 +15,6 @@ describe("Handling data via webdriver uni", () => {
             if (Number(userDetails[i])) {
                 numb += Number(userDetails[i])
             }
-            //cy.log(userDetails[i])
            }
            cy.log('Found the total age: ' + numb)
            expect(numb).to.eq(322)

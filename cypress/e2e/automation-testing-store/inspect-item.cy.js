@@ -12,7 +12,6 @@ describe("Inspecting Automation Test Store items", () =>{
     it("Click on the first item using item text", () => {
         
         cy.visit("https://automationteststore.com")
-        //cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click()
         cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then(function(itemHeaderText) {
             console.log('Selected the following item: ' + itemHeaderText.text())
         })

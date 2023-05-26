@@ -11,7 +11,7 @@ describe("Test mouse actions", () =>{
         cy.visit("https://webdriveruniversity.com")
         cy.get("#actions").scrollIntoView().invoke('removeAttr', 'target').click({force:true})
 
-        cy.get('#draggable').trigger('mousedown', {which: 1}) // the "which" will click on the center of the given element
+        cy.get('#draggable').trigger('mousedown', {which: 1}) 
         cy.get('#droppable').trigger('mousemove').trigger('mouseup', {force:true})
    });
 
