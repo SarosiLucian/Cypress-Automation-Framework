@@ -9,6 +9,7 @@
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
     "triggerAllTests-dashboard": "npx cypress run --record key 94a368e6-d979-4d2f-94f9-a4345461a20c",
     "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*",
+    "triggerAllTests-webdriveruni-dashboard": "npx cypress run --spec cypress/e2e/webdriver-uni/* --record key 94a368e6-d979-4d2f-94f9-a4345461a20c --parallel --browser chrome --headed",
     "triggerAllTests-autostore": "npx cypress run --spec cypress/e2e/automation-testing-store/*",
     "triggerAllTests-autostore-dashboard": "npx cypress run --spec cypress/e2e/automation-testing-store/* --record key 94a368e6-d979-4d2f-94f9-a4345461a20c --parallel --browser chrome --headed",
     "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/e2e/webdriver-uni/features/*.feature --browser chrome --headed",

@@ -14,7 +14,7 @@ pipeline {
                     git url: 'https://github.com/SarosiLucian/Cypress-Automation-Framework.git'
                     bat 'npm install'
                     bat 'npm update'
-                    bat 'npm run triggerAllTests-autostore-dashboard'
+                    bat 'npm run %Script%'
                    }
                 }
 
@@ -26,7 +26,7 @@ pipeline {
                     git url: 'https://github.com/SarosiLucian/Cypress-Automation-Framework.git'
                     bat 'npm install'
                     bat 'npm update'
-                    bat 'npm run triggerAllTests-autostore-dashboard'
+                    bat 'npm run %Script%'
                    }
                 }
             }
