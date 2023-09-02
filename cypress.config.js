@@ -30,7 +30,6 @@ module.exports = defineConfig({
     //excludeSpecPattern: "cypress/e2e/other/*.js",
     baseUrl: "https://webdriveruniversity.com",
     chromeWebSecurity: false,
-    experimentalSessionAndOrigin: true,
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,
     screenshotOnRunFailure: true,
