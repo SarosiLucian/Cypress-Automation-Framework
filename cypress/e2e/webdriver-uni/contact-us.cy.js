@@ -20,7 +20,7 @@ beforeEach(function() {
     homepage_PO.visitHomePage();
     cy.wait(3000)
     homepage_PO.clickOn_Contact_Us_Button();
-    //cy.pause()
+    
 });
 
     it("Should be able to submit a successfull submission via contact us form", () => {
