@@ -1,35 +1,34 @@
 ///<reference types = "Cypress" />
 
-describe("Verify autocomplete drop-down-list via webdriveruni", () =>{
-
+describe("Verify Autocomplete dropwdown lists via webdriveruni", () => {
     it("Select specific product via autocomplete list", () => {
-        cy.visit("https://webdriveruniversity.com")
-        cy.get("#autocomplete-textfield").invoke('removeAttr', 'target').click({force:true})
-        
-        cy.get('#myInput').type('A')
+        cy.visit("https://www.webdriveruniversity.com")
+        cy.get('#autocomplete-textfield').invoke('removeAttr', 'target').click({force:true})
+
+        cy.get('#myInput').type('p')
 
         cy.get('#myInputautocomplete-list > *').each(($el, index, $list) => {
             const prod = $el.text();
-            const productToSelect = 'Avocado';
+            const productToSelect = 'Pizza';
 
             if(prod === productToSelect) {
-                $el.trigger("click")
+                $el.trigger("click");
 
-                cy.get('#submit-button').click()
+                cy.get('#submit-button').click();
                 cy.url().should('include', productToSelect)
             }
         }).then(() => {
-            cy.get('#myInput').type('g')
+            cy.get('#myInput').type('d')
 
             cy.get('#myInputautocomplete-list > *').each(($el, index, $list) => {
                 const prod = $el.text();
-                const productToSelect = 'Grapes';
-
+                const productToSelect = 'Donuts';
+    
                 if(prod === productToSelect) {
-                    $el.trigger("click")
-
-                    cy.get('#submit-button').click()
-                    cy.url().should('include', productToSelect)  
+                    $el.trigger("click");
+    
+                    cy.get('#submit-button').click();
+                    cy.url().should('include', productToSelect)
                 }
             })
         })
