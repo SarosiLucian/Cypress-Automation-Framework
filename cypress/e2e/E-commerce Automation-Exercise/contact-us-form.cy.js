@@ -1,8 +1,8 @@
 import {faker} from '@faker-js/faker'
+import { commonCSS } from '../../../helpers/commonCSS';
 
 ///<reference types = "Cypress" />
 
-const home_page = "div[class='item active'] h1:nth-child(1)";
 const name = faker.person.firstName();
 const email = faker.internet.email();
 const subject = "Complaint";
@@ -11,7 +11,7 @@ const message = faker.git.commitMessage();
 describe('Contact Us form', () => {
     it('Submit contact us form', () => {
         cy.visit("https://automationexercise.com")
-        cy.get(home_page).should("be.visible")
+        cy.get(commonCSS.homePage).should("be.visible")
         cy.get("a[href='/contact_us']").click()
         cy.get("div[class='contact-form'] h2[class='title text-center']").should("be.visible").
         and("have.text", "Get In Touch")

@@ -1,4 +1,5 @@
 import {faker} from '@faker-js/faker'
+import { commonCSS } from '../../../helpers/commonCSS';
 
 ///<reference types = "Cypress" />
 
@@ -18,7 +19,7 @@ const password = "Parola123";
 describe('Register & Delete user via AutomationExercise', () => {
     it('Register a new user and delete it', () => {
         cy.visit("https://automationexercise.com")
-        cy.get("div[class='item active'] h1:nth-child(1)").should("be.visible")
+        cy.get(commonCSS.homePage).should("be.visible")
         cy.get("a[href='/login']").click()
         cy.get("div[class='signup-form'] h2").should("have.text", "New User Signup!")
         cy.get("input[placeholder='Name']").type(newUser)
